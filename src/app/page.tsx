@@ -13,6 +13,7 @@ export default function Home() {
           </label>
           <textarea name="review" id="feedback" placeholder="Write a review" className="w-full px-5 py-10 leading-tight border-gray-300 border-2 outline-none rounded-sm hover:rounded-xl hover:border-gray-400 focus:border-t-blue-400  focus:border-r-blue-400 focus:border-b-blue-600 focus:border-l-blue-600 focus:rounded-2xl">
           </textarea>
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" >Submit</button>
         </form>
     </div>
 
