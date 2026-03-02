@@ -6,11 +6,11 @@ export default function ReviewForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (!formData.review.trim()) return alert("Write a review!");
-    
-    setIsSubmitted(true);
-  };
+  e.preventDefault();
+  if (!formData.review.trim()) return alert("Write a review!");
+  
+  setIsSubmitted(true);
+};
 
   if (isSubmitted) {
     return (
