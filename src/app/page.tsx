@@ -1,3 +1,4 @@
+import { CookieCounter } from "./components/cookieConter";
 import ReviewForm from "./components/reviewFrom";
 
 
@@ -21,6 +22,11 @@ export default function Home() {
       <div>
         <ReviewForm/>
       </div>
+      <div className="">
+     
+
+      </div>
+      <CookieCounter/>
 
    </section>
   );
