@@ -2,11 +2,12 @@ import { CookieCounter } from "./components/cookieConter";
 import MatchScore from "./components/macthScore";
 import StudentMarks from "./components/marks";
 import ReviewForm from "./components/reviewFrom";
+import ShowUserInput from "./components/showInput";
 
 
 export default function Home() {
   return (
-   <section className=" w-screen h-screen mx-auto">
+   <section className=" w-screen h-screen mx-auto ">
 
     {/* <div className="flex flex-col items-center justify-center mt-20 md:flex-row">
       <div>
@@ -16,6 +17,7 @@ export default function Home() {
 
     </div> */}
     <StudentMarks/>
+    <ShowUserInput/>
 
    </section>
   );
