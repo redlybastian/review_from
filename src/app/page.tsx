@@ -3,6 +3,7 @@ import MatchScore from "./components/macthScore";
 import StudentMarks from "./components/marks";
 import ReviewForm from "./components/reviewFrom";
 import ShowUserInput from "./components/showInput";
+import ShowInput1 from "./components/showInput1";
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
     </div> */}
     <StudentMarks/>
     <ShowUserInput/>
+    <ShowInput1/>
 
    </section>
   );

@@ -10,8 +10,8 @@ export default function ShowInput1(){
     return(
         <div>
             <h1>User input2</h1>
-            <input type="text"  />
-            <p><strong>User output</strong> </p>
+            <input className="bg-gray-200 " type="text" value={userInput} onChange={hadleChange}  />
+            <p><strong>User output</strong> {userInput}</p>
         </div>
     )
 }
