@@ -8,13 +8,14 @@ export default function Home() {
   return (
    <section className=" w-screen h-screen mx-auto">
 
-    <div className="flex flex-col items-center justify-center mt-20 md:flex-row">
+    {/* <div className="flex flex-col items-center justify-center mt-20 md:flex-row">
       <div>
         <h1 className="text-5xl font-bold text-center"><span className="text-blue-500">Anker</span> Sundcore  <br /><span className="text-blue-400">R50i NC</span></h1>
       </div>
       
 
-    </div>
+    </div> */}
+    <StudentMarks/>
 
    </section>
   );
