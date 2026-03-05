@@ -1,4 +1,5 @@
 import { CookieCounter } from "./components/cookieConter";
+import DisplayName from "./components/displyName";
 import MatchScore from "./components/macthScore";
 import StudentMarks from "./components/marks";
 import ReviewForm from "./components/reviewFrom";
@@ -20,6 +21,7 @@ export default function Home() {
     <StudentMarks/>
     <ShowUserInput/>
     <ShowInput1/>
+    <DisplayName/>
 
    </section>
   );
