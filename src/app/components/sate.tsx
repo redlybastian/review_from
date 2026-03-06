@@ -3,11 +3,16 @@
 import { useState } from "react"
 
 export default function UserReview(){
-    const [formData,setFormData] = useState('')
+    const [formData,setFormData] = useState<{email:string,name:string,review:string}>({
+        email:'',
+        name:'',
+        review:''
+    })
     const [feedback,setFeedback] = useState('fill the form')
 
     const hadelSubmit = (e:React.ChangeEvent<HTMLFormElement>) =>{
-        
+        e.preventDefault()
+
     }
 
 
@@ -15,9 +20,9 @@ export default function UserReview(){
         <div className=" w-full h-screen mx-auto ">
             <h3 className="text-center text-xl font-bold">Review Submit</h3>
             <div className="rounded-xl mt-4 pb-10 pt-5 shadow-xl flex flex-col mx-auto w-1/2 items-center justify-center bg-amber-50">
-                <form  className="flex flex-col gap-3 ">
+                <form onChange={hadelSubmit} className="flex flex-col gap-3 ">
                     <label className="text-sm font-bold" htmlFor="email">Email  </label>
-                    <input className="bg-white rounded-2xl outline-1" type="email"   />
+                    <input value={formData.email} className="bg-white rounded-2xl outline-1" type="email"   />
                     <label className="text-sm font-bold" htmlFor="text">Name  </label>
                     <input className="bg-white rounded-2xl outline-1" type="text"   />
                     <label className="text-sm font-bold" htmlFor="text">Review  </label>
