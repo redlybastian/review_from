@@ -1,20 +1,20 @@
 "use client"
 
-/*************  ✨ Windsurf Command ⭐  *************/
-/**
- * A component that renders a review submission form.
- * The form includes fields for email, name, and review text.
- * The form also includes a submit button.
- * @returns A JSX element representing the review submission form.
- */
-/*******  fe9b90d1-50e7-4229-8f74-fd0409228b51  *******/
-export default function newReview(){
+import React, { useState } from "react"
+
+export default function NewReview(){
+    const [isSubmit,setIsSubmit] = useState(false)
+
+    const handelSubmit = (e:React.FormEvent)=>{
+        e.preventDefault()
+
+    }
 
     return(
         <div className=" w-full h-screen mx-auto ">
             <h3 className="text-center text-xl font-bold">Review Submit</h3>
             <div className="rounded-xl mt-4 pb-10 pt-5 shadow-xl flex flex-col mx-auto w-1/2 items-center justify-center bg-amber-50">
-                <form  className="flex flex-col gap-3 ">
+                <form onSubmit={handelSubmit}  className="flex flex-col gap-3 ">
                     <label className="text-sm font-bold" htmlFor="email">Email  </label>
                     <input  className="bg-white rounded-2xl outline-1" type="email"   />
                     <label  className="text-sm font-bold" htmlFor="text">Name  </label>

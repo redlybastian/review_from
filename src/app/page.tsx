@@ -2,6 +2,7 @@ import { CookieCounter } from "./components/cookieConter";
 import DisplayName from "./components/displyName";
 import MatchScore from "./components/macthScore";
 import StudentMarks from "./components/marks";
+import NewReview from "./components/reviewForm2";
 import ReviewForm from "./components/reviewFrom";
 import UserReview from "./components/sate";
 import ShowUserInput from "./components/showInput";
@@ -23,7 +24,8 @@ export default function Home() {
     <ShowUserInput/>
     <ShowInput1/>
     <DisplayName/> */}
-    <UserReview/>
+    {/* <UserReview/> */}
+    <NewReview />
 
    </section>
   );
