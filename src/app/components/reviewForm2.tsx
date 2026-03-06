@@ -16,7 +16,7 @@ export default function NewReview(){
         e.preventDefault()
         setErrorMessage('')
         if(!formData.email || !formData.name || !formData){
-
+            setErrorMessage("All Fields are required")
 
         }
 
