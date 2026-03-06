@@ -1,6 +1,16 @@
 'use client'
 
+import { useState } from "react"
+
 export default function UserReview(){
+    const [formData,setFormData] = useState('')
+    const [feedback,setFeedback] = useState('fill the form')
+
+    const hadelSubmit = (e:React.ChangeEvent<HTMLFormElement>) =>{
+        
+    }
+
+
     return(
         <div className=" w-full h-screen mx-auto ">
             <h3 className="text-center text-xl font-bold">Review Submit</h3>
@@ -12,6 +22,7 @@ export default function UserReview(){
                     <input className="bg-white rounded-2xl outline-1" type="text"   />
                     <label className="text-sm font-bold" htmlFor="text">Review  </label>
                     <textarea name="review" id="review" rows={5} cols={5} className="bg-white rounded-2xl outline-1"></textarea>
+                    <p className="text-center">{feedback}</p>
                     <button className="text-white bg-black px-2 py-2 rounded-4xl shadow-xl hover:bg-gray-700 cursor-pointer">Submit</button>
                 
                   
