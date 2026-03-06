@@ -1,5 +1,6 @@
 "use client"
 
+import { error } from "console"
 import React, { useState } from "react"
 
 export default function NewReview(){
@@ -17,6 +18,7 @@ export default function NewReview(){
         setErrorMessage('')
         if(!formData.email || !formData.name || !formData){
             setErrorMessage("All Fields are required")
+            return
 
         }
 
@@ -34,6 +36,7 @@ export default function NewReview(){
                 (isSubmit) ? <div className="text-black font-bold">Thank you for your feedback!</div> :
 
                 <form onSubmit={handelSubmit}  className="flex flex-col gap-3 ">
+                    {errorMessage && <p className="text-red-500 text-xs font-bold text-center">{errorMessage}</p>}
                     <label className="text-sm font-bold" htmlFor="email">Email  </label>
                     <input name="email" value={formData.email} onChange={handelChange} className="bg-white rounded-2xl outline-1" type="email"   />
                     <label  className="text-sm font-bold" htmlFor="text">Name  </label>
