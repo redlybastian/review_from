@@ -3,7 +3,11 @@
 
 import React, { useState } from "react"
 
-export default function NewReview(){
+interface NewReviewProps {
+    children?:React.ReactNode;
+}
+
+export default function NewReview({children}:NewReviewProps){
     const [isSubmit,setIsSubmit] = useState(false)
     const [formData,setFormData] = useState({email:'',name:'',review:''})
     const [errorMessage,setErrorMessage] = useState('')
@@ -16,7 +20,7 @@ export default function NewReview(){
     const handelSubmit = (e:React.FormEvent)=>{
         e.preventDefault()
         setErrorMessage('')
-        if(!formData.email || !formData.name || !formData){
+        if(!formData.email || !formData.name || !formData.review){
             setErrorMessage("All Fields are required")
             return
 
@@ -30,12 +34,13 @@ export default function NewReview(){
 
     return(
         <div className=" w-full h-screen mx-auto ">
+            {children}
             <h3 className="text-center text-xl font-bold">Review Submit</h3>
-            <div className="rounded-xl mt-4 pb-10 pt-5 shadow-xl flex flex-col mx-auto w-1/2 items-center justify-center bg-amber-50">
+            <div className="rounded-xl md:w-1/2 bg-gradient-to-l mt-4 pb-10 pt-5 shadow-xl flex flex-col mx-auto w-1/2 items-center justify-center  outline-blue-100 outline-1 to-blue-600 b-gradient-to-r bg-amber-200 shadow-2xl">
                {
                 (isSubmit) ? <div className="text-black font-bold">Thank you for your feedback!</div> :
 
-                <form onSubmit={handelSubmit}  className="flex flex-col gap-3 ">
+                <form onSubmit={handelSubmit}  className="flex flex-col border-2 bg-white border-sky-400 gap-3 bg-sky50 rounded-2xl mx-auto p-10 ">
                     {errorMessage && <p className="text-red-500 text-xs font-bold text-center">{errorMessage}</p>}
                     <label className="text-sm font-bold" htmlFor="email">Email  </label>
                     <input name="email" value={formData.email} onChange={handelChange} className="bg-white rounded-2xl outline-1" type="email"   />

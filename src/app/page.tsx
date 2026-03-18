@@ -25,7 +25,9 @@ export default function Home() {
     <ShowInput1/>
     <DisplayName/> */}
     {/* <UserReview/> */}
-    <NewReview />
+      <NewReview>
+        <h3 className="text-2xl font-bold text-center text-black">Share Your Experience</h3>
+      </NewReview>
 
    </section>
   );
